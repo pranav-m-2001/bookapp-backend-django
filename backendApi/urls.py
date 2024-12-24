@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from . import settings
+from . import deployment_settings
 from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
+import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +29,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='refresh'),
 ] 
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if 'RENDER_EXTERNAL_HOSTNAME' in os.environ:
+    urlpatterns += static(deployment_settings.MEDIA_URL, document_root=deployment_settings.MEDIA_ROOT)
+else:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
