@@ -69,5 +69,8 @@ DATABASES = {
     )
 }
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 REACT_URL = 'https://bookapp-admin.onrender.com'
 STRIPE_SECRET = 'sk_test_51QXzO82K5KDa953KKl9Cc1fac42akqJj2wq2lrSJcrgw8SptWoQrHrwETvjiK4Kz0T3eCCja36QlKQIHOyoTyZnV00zTsUQwVg'
