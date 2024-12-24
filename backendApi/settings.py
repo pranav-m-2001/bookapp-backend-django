@@ -177,6 +177,7 @@ STRIPE_SECRET = 'sk_test_51QXzO82K5KDa953KKl9Cc1fac42akqJj2wq2lrSJcrgw8SptWoQrHr
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5174',
     'http://localhost:5173',
+    'https://bookapp-shop.onrender.com',
 ]
 
 LOGIN_REDIRECT_URL = '/callback/'
