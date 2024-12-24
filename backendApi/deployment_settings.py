@@ -49,6 +49,10 @@ AUTHENTICATION_BACKENDS = {
     'allauth.account.auth_backends.AuthenticationBackend'
 }
 
+CORS_ALLOWED_ORIGINS = [
+    'https://bookapp-admin.onrender.com',
+]
+
 STORAGES = {
     'default':{
         'BACKEND': 'django.core.files.storage.FileSystemStorage',
@@ -65,3 +69,5 @@ DATABASES = {
     )
 }
 
+REACT_URL = 'https://bookapp-admin.onrender.com'
+STRIPE_SECRET = 'sk_test_51QXzO82K5KDa953KKl9Cc1fac42akqJj2wq2lrSJcrgw8SptWoQrHrwETvjiK4Kz0T3eCCja36QlKQIHOyoTyZnV00zTsUQwVg'
